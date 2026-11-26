@@ -8,5 +8,12 @@ preetz_dbt:
       threads: 1
       token: token
       type: databricks
+    prod:
+      catalog: dbt_catalog_prod
+      host: host_name
+      http_path: http_path
+      schema: default
+      threads: 1
+      token: token
+      type: databricks
   target: dev
- 
