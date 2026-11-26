@@ -1,0 +1,12 @@
+preetz_dbt:
+  outputs:
+    dev:
+      catalog: dbt_catalog
+      host: host_name
+      http_path: http_path
+      schema: default
+      threads: 1
+      token: token
+      type: databricks
+  target: dev
+ 

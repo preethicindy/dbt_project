@@ -1,0 +1,24 @@
+models:
+    - name: bronze_sales
+      config:
+        schema: bronze
+      columns:
+        - name: sales_id
+          data_tests:
+            - unique
+            - not_null
+    
+    - name: bronze_store
+      config:
+        schema: bronze
+      columns :
+        - name : store_sk
+          data_tests :
+            - unique
+            - not_null
+        - name : store_name
+          data_tests:
+            - accepted_values:
+                arguments:
+                    values: ['MegaMart Manhatten', 'MegaMart Brooklyn', 'MegaMart Austin', 'MegaMart San Jose', 'MegaMart Toronto']
+                    severity: warn
