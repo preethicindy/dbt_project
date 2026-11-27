@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+    - name : postgres_source
+      database : dbt_dev 
+      schema : dbt_schema
+      tables:
+        - name: raw_customers
+        - name: raw_orders
+        - name: raw_payments
